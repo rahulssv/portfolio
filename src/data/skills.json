@@ -1,32 +1,65 @@
 [
   {
-    "title": "Title 1",
+    "title": "Frontend",
     "icon": "bi-file-earmark-code-fill",
     "overview": true,
     "technologies": [
-      "Technology 1A",
-      "Technology 1B",
-      "Technology 1C",
-      "Technology 1D"
+      "HTML",
+      "CSS",
+      "JS",
+      "REACT JS",
+      "SASS"
     ]
   },
   {
-    "title": "Title 2",
+    "title": "Backend",
     "icon": "bi-file-earmark-code-fill",
     "overview": true,
     "technologies": [
-      "Technology 2A",
-      "Technology 2B",
-      "Technology 2C"
+      "Java",
+      "Spring Boot",
+      "Python",
+      "GoLang",
+      "Node JS"
     ]
   },
   {
-    "title": "Title 3",
+    "title": "DevOps",
     "icon": "bi-file-earmark-code-fill",
     "overview": true,
     "technologies": [
-      "Technology 3A",
-      "Technology 3B"
+      "Docker",
+      "Kubernetes",
+      "OpenShift",
+      "Ansible",
+      "Terraform",
+      "Jenkins",
+      "GitHub Action",
+      "Travis"
+    ]
+  },
+  {
+    "title": "Cloud",
+    "icon": "bi-file-earmark-code-fill",
+    "overview": true,
+    "technologies": [
+      "AWS",
+      "Microsoft Azure",
+      "Google Cloud",
+      "IBM Cloud"
+    ]
+  },
+  {
+    "title": "Database",
+    "icon": "bi-file-earmark-code-fill",
+    "overview": true,
+    "technologies": [
+      "MySQL DB",
+      "Couch DB",
+      "Mango DB",
+      "Redis DB",
+      "RabbitMQ"
     ]
   }
+
 ]

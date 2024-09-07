@@ -1,68 +1,70 @@
 [
   {
-    "start": "Start 1",
-    "end": "End 1",
-    "role": "Role 1",
-    "company": "Employers 1",
-    "location": "Location 1",
-    "description": "Description 1",
+    "start": "August 2022",
+    "end": "October 20222",
+    "role": "Student Intern",
+    "company": "Persistent Systems LTD",
+    "location": "Verna, Goa",
+    "description": "DevOps Role",
     "bullets": [
-      "Bullet 1A",
-      "Bullet 1B",
-      "Bullet 1C",
-      "Bullet 1D"
+      "Porting Linux Packages"
     ],
     "technologies": [
-      "Technologies 1A",
-      "Technologies 1B"
+      "Docker",
+      "Git",
+      "GitHub",
+      "Python",
+      "React",
+      "Kotlin",
+      "Shell Scripting"
     ]
   },
   {
-    "start": "Start 2",
-    "end": "End 2",
-    "role": "Role 2",
-    "company": "Employers 2",
-    "location": "Location 2",
-    "description": "Description 2",
+    "start": "January 2023",
+    "end": "June 2023",
+    "role": "Trainee",
+    "company": "Persistent Systems LTD",
+    "location": "Verna, Goa",
+    "description": "GEMS",
     "bullets": [
-      "Bullet 2A",
-      "Bullet 2B",
-      "Bullet 2C",
-      "Bullet 2D"
+      "Johnnie Traveller's Website",
+      "Project Demo"
     ],
     "technologies": [
-      "Technologies 2A",
-      "Technologies 2B",
-      "Technologies 2C",
-      "Technologies 2D"
+      "Spring",
+      "Spring Boot",
+      "UML",
+      "JSON API",
+      "Java",
+      "Sonarqube"
     ]
   },
   {
-    "start": "Start 3",
-    "end": "End 3",
-    "role": "Role 3",
-    "company": "Employers 3",
-    "location": "Location 3",
-    "description": "Description 3",
+    "start": "September 2023",
+    "end": "Present",
+    "role": "Software Engineer",
+    "company": "Persistent Systems LTD",
+    "location": "Verna, Goa",
+    "description": "DevOps Role",
     "bullets": [
-      "Bullet 3A",
-      "Bullet 3B",
-      "Bullet 3C",
-      "Bullet 3D"
+      "Porting Linux Packages",
+      "Github Actions on PPC64LE Architecture"
     ],
-    "technologies": []
-  },
-  {
-    "start": "Start 4",
-    "end": "End 4",
-    "role": "Role 4",
-    "company": "Employers 4",
-    "location": "Location 4",
-    "description": "Description 4",
-    "bullets": [],
     "technologies": [
-      "Technologies 4A",
-      "Technologies 4B"
+      "Docker",
+      "Kubernetes",
+      "OpenShift",
+      "Ansible",
+      "Terraform",
+      "Jenkins",
+      "Travis",
+      "GitHub Actions",
+      "Linux",
+      "Shell Scripting",
+      "GoLang",
+      "AWS Cloud",
+      "Azure Cloud",
+      "IBM Cloud"
     ]
   }
 ]
