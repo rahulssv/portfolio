@@ -68,7 +68,7 @@ function PortfolioDetail({ match }) {
               <Carousel>
                 {project.images.map((image, i_index) =>
                   <Carousel.Item key={i_index}>
-                    <img src={image} alt={project.name.toLowerCase().replaceAll(' ', '_')}/>
+                    <img src={image} alt={project.name.toLowerCase().replaceAll(' ', '_')} style={{ display: 'block', margin: '0 auto', width: '500px', height: '300px' }}/>
                   </Carousel.Item>
                 )}
               </Carousel>

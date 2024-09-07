@@ -49,6 +49,7 @@ function Portfolio() {
                       variant="top"
                       alt={project.name.toLowerCase().replaceAll(' ', '_')}
                       src={project.images[0]}
+                      style={{ display: 'block', margin: '0 auto', width: '260px', height: '170px' }}
                     />
 
                     <Link className="card-img-overlay btn" role="button" to={"/portfolio/" + project.name.toLowerCase().replace(/\s+/g, '-')}>
