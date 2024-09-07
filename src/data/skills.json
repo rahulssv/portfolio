@@ -20,7 +20,8 @@
       "Spring Boot",
       "Python",
       "GoLang",
-      "Node JS"
+      "Node JS",
+      "JSON"
     ]
   },
   {
@@ -34,7 +35,7 @@
       "Ansible",
       "Terraform",
       "Jenkins",
-      "GitHub Action",
+      "GitHub Actions",
       "Travis"
     ]
   },
@@ -46,7 +47,9 @@
       "AWS",
       "Microsoft Azure",
       "Google Cloud",
-      "IBM Cloud"
+      "IBM Cloud",
+      "GitHub",
+      "Google Drive"
     ]
   },
   {

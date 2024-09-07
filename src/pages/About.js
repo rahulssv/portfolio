@@ -91,7 +91,7 @@ function About() {
                     <Card.Img
                       variant="top"
                       alt={project.name.toLowerCase().replaceAll(' ', '_')}
-                      src={"./images/projects/" + project.imageHeading + "01.png"}
+                      src={project.images[0]}
                     />
 
                     <Link className="card-img-overlay btn" role="button" to={"/portfolio/" + project.name.toLowerCase().replace(/\s+/g, '-')}>
