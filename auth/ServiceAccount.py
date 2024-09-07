@@ -59,7 +59,7 @@ def list_all_files(service, folder_id=DRIVE_ROOT_ID, parent_path=''):
 files = list_all_files(drive_service)
 
 # Output the list to a JSON file
-with open('documents.json', 'w') as file:
+with open('../src/data/documents.json', 'w') as file:
     json.dump(files, file, indent=4)
 
 print("Files listed and written to auth.json")

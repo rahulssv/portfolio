@@ -14,7 +14,7 @@ function Contact() {
 
       <section className='section-padding'>
         <Container className="content-gutter text-center">
-          <Image src="https://avatars.githubusercontent.com/u/80143331?v=4" roundedCircle />
+          <Image src={profile.avatar} roundedCircle />
 
           <div className="bubble">
             <p> Looking for an experienced developer to develop or ship your software product? To start an initial chat, drop an email at <a href={"mailto:" + profile.email}> {profile.email} </a> or use the form below to get in touch. </p>

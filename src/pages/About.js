@@ -17,7 +17,7 @@ function About() {
         <Container>
           <Row>
             <Col md={3} sm={12} className="profile-picture">
-              <Image src='https://avatars.githubusercontent.com/u/80143331?v=4' alt="profile-picture" rounded />
+              <Image src={profile.avatar} alt="profile-picture" rounded />
             </Col>
 
             <Col md={9} sm={12} className="website-intro">
@@ -151,7 +151,7 @@ function About() {
 
       <section className="section-padding blue-section text-center contact">
         <Container>
-          <Image src="https://avatars.githubusercontent.com/u/80143331?v=4" roundedCircle />
+          <Image src={profile.avatar} roundedCircle />
 
           <h3> Interested in hiring me for your project? </h3>
 

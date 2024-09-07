@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './Portfolio.scss';
 import skills from '../data/skills.json';
 import projects from '../data/projects.json';
+import documents from '../../auth/documents.json'
 import PageHeader from '../components/PageHeader';
 
 
