@@ -74,7 +74,7 @@ def list_all_files(service, folder_id=DRIVE_ROOT_ID, parent_path=''):
                     project_name = parsed_data['name']
                     
                     # Create file URL
-                    file_url = f"https://drive.google.com/uc?export=view&id={item['id']}"
+                    file_url = f"https://drive.google.com/thumbnail?id={item['id']}&sz=h200"
                     
                     # Initialize the project in the dictionary if it doesn't exist
                     if project_name not in projects_dict:

@@ -2,7 +2,7 @@
     {
         "start": "October 2023",
         "end": "December 2023",
-        "name": "GH-pages",
+        "name": "GH Pages",
         "technologies": [
             "GitHub Actions",
             "GitHub"
@@ -23,10 +23,10 @@
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/uc?export=view&id=1-rewXKAaS3xs5c_-2j5eX9DPORpjC_es",
-            "https://drive.google.com/uc?export=view&id=1-pVWFNOIyvGDBuZQB4Rek_tMoAB-txn8"
+            "https://drive.google.com/thumbnail?id=1-rewXKAaS3xs5c_-2j5eX9DPORpjC_es&sz=h200",
+            "https://drive.google.com/thumbnail?id=1-pVWFNOIyvGDBuZQB4Rek_tMoAB-txn8&sz=h200"
         ],
-        "imageHeading": "GH-pages",
+        "imageHeading": "GH Pages",
         "overview": true
     },
     {
@@ -61,7 +61,7 @@
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/uc?export=view&id=12xVCvgNTHHqYasp07yCmb6uoKokrUtKI"
+            "https://drive.google.com/thumbnail?id=12xVCvgNTHHqYasp07yCmb6uoKokrUtKI&sz=h200"
         ],
         "imageHeading": "Rudra Enterprises",
         "overview": true
@@ -95,7 +95,7 @@
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/uc?export=view&id=12uxTnzk8AkwQ8p99DINdpBq3xQtwhGQD"
+            "https://drive.google.com/thumbnail?id=12uxTnzk8AkwQ8p99DINdpBq3xQtwhGQD&sz=h200"
         ],
         "imageHeading": "Quiz App",
         "overview": true
@@ -129,8 +129,8 @@
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/uc?export=view&id=12rUbaBCjXeh4NdMG_3vtDv7HeeQE_lKZ",
-            "https://drive.google.com/uc?export=view&id=12peSs2iVMrOUnMacGYruA0T56WOO0YNH"
+            "https://drive.google.com/thumbnail?id=12rUbaBCjXeh4NdMG_3vtDv7HeeQE_lKZ&sz=h200",
+            "https://drive.google.com/thumbnail?id=12peSs2iVMrOUnMacGYruA0T56WOO0YNH&sz=h200"
         ],
         "imageHeading": "Johnnie Traveller's",
         "overview": true
@@ -160,8 +160,8 @@
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/uc?export=view&id=12jgYEF8g7jhmv-j6hiQeKrOlU_I19M3U",
-            "https://drive.google.com/uc?export=view&id=12d96u5vGl1ZozcbNtoRnjGCrYJnKOpDU"
+            "https://drive.google.com/thumbnail?id=12jgYEF8g7jhmv-j6hiQeKrOlU_I19M3U&sz=h200",
+            "https://drive.google.com/thumbnail?id=12d96u5vGl1ZozcbNtoRnjGCrYJnKOpDU&sz=h200"
         ],
         "imageHeading": "Infrastructure",
         "overview": true

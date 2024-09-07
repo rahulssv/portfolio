@@ -52,7 +52,7 @@ function PortfolioDetail({ match }) {
             {project.videos.length > 0 && project.videos.map((video, v_index) =>
               <Col md={6} sm={12} key={v_index}>
                 <iframe
-                  width="100%" height="315" src={"https://www.youtube.com/embed/" + video.split("=")[1]}
+                  width="100%" height="315" src={video}
                   title="YouTube video player" frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </Col>
@@ -63,23 +63,19 @@ function PortfolioDetail({ match }) {
             <div className="spacer" />
           }
 
-          {project.images > 0 &&
+          {project.images.length > 0 &&
             <div className="media-gutter">
               <Carousel>
-                {[...new Array(project.images)].map((_, i_index) =>
+                {project.images.map((image, i_index) =>
                   <Carousel.Item key={i_index}>
-                    <img
-                      className="d-block w-100"
-                      src={"./images/projects/" + project.imageHeading + String(i_index + 1).padStart(2, '0') + ".png"}
-                      alt={project.imageHeading + String(i_index + 1).padStart(2, '0')}
-                    />
+                    <img src={image} alt={project.name.toLowerCase().replaceAll(' ', '_')}/>
                   </Carousel.Item>
                 )}
               </Carousel>
             </div>
           }
 
-          {project.images > 0 &&
+          {project.images.length > 0 &&
             <div className="spacer" />
           }
         </Container>
