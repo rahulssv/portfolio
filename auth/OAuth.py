@@ -1,5 +1,6 @@
 import os
-from flask import Flask, redirect, request, jsonify
+import json
+from flask import Flask, redirect, request, jsonify, send_file
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
@@ -11,6 +12,7 @@ CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
 CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 REDIRECT_URI = 'http://localhost:5000/oauth2callback'
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+DRIVE_ROOT_ID = os.getenv('DRIVE_ROOT_ID')
 
 # Custom OAuth2 Flow without credentials.json
 def create_flow():
@@ -46,6 +48,44 @@ def oauth2callback():
     # Store credentials as needed or redirect to list files
     return redirect(f'/list-files?token={credentials.token}&refresh_token={credentials.refresh_token}')
 
+# Helper function to list all files recursively with folder hierarchy
+def list_all_files(service, folder_id=DRIVE_ROOT_ID, parent_path=''):
+    files_list = []
+    folders_to_process = [{'id': folder_id, 'path': parent_path}]
+    
+    while folders_to_process:
+        current_folder = folders_to_process.pop(0)
+        folder_id = current_folder['id']
+        folder_path = current_folder['path']
+        
+        # List files and folders in the current folder
+        results = service.files().list(
+            q=f"'{folder_id}' in parents",
+            fields="files(id, name, mimeType)",
+            spaces='drive'
+        ).execute()
+        
+        items = results.get('files', [])
+        for item in items:
+            if item['mimeType'] == 'application/vnd.google-apps.folder':
+                # If it's a folder, add to the processing queue with updated path
+                folders_to_process.append({
+                    'id': item['id'],
+                    'path': f"{folder_path}/{item['name']}"
+                })
+            else:
+                # If it's a file, add to the list with full URL and folder path
+                file_url = f"https://drive.google.com/uc?export=view&id={item['id']}"
+                files_list.append({
+                    'id': item['id'],
+                    'name': item['name'],
+                    'mimeType': item['mimeType'],
+                    'url': file_url,
+                    'folder': folder_path
+                })
+                
+    return files_list
+
 # List all files in Google Drive root folder and export data in JSON format
 @app.route('/list-files')
 def list_files():
@@ -61,18 +101,18 @@ def list_files():
     # Build the Google Drive API client
     drive_service = build('drive', 'v3', credentials=creds)
 
-    # Replace 'your-folder-id-here' with the actual folder ID
-    folder_id = '1-E_B0AXggAncRbl6vbs27yBiF1bMzUvZ'
-    results = drive_service.files().list(
-        q=f"'{folder_id}' in parents",
-        fields="files(id, name)"
-    ).execute()
+    # List all files starting from the root folder
+    files = list_all_files(drive_service)
 
-    files = results.get('files', [])
     if not files:
-        return jsonify({'message': 'No files found in your Google Drive root folder.'})
+        return jsonify({'message': 'No files found in your Google Drive.'})
 
-    # Return the file details as JSON
+    # Write the file details to auth.json
+    with open('documents.json', 'w') as file:
+        json.dump(files, file, indent=4)
+    
+    # Send the file for download
+    #send_file('auth.json', as_attachment=True)
     return jsonify(files)
 
 if __name__ == '__main__':
