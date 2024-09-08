@@ -6,6 +6,9 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+
+      - name: check
+        run: echo ${{ secrets.SERVICE_ACCOUNT_FILE }}
       
       - name: update file
         run: |
