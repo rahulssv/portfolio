@@ -1,5 +1,35 @@
 [
     {
+        "start": "June 2023",
+        "end": "December 2023",
+        "name": "Johnnie Traveler's",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "REACT JS",
+            "Spring Boot",
+            "Docker",
+            "GitHub Actions",
+            "MySQL DB"
+        ],
+        "description": [
+            "This project showcases the deployment of static websites using GitHub Pages, a free hosting service from GitHub. It allows users to turn their repositories into websites that are automatically updated with every push. The pages are built using Jekyll, Hugo, or other static site generators, and are ideal for hosting documentation, blogs, portfolios, or project landing pages."
+        ],
+        "buttons": [
+            {
+                "text": "link",
+                "link": "https://rahulssv.github.io/jttours"
+            }
+        ],
+        "videos": [],
+        "images": [
+            "https://drive.google.com/thumbnail?id=12rUbaBCjXeh4NdMG_3vtDv7HeeQE_lKZ&sz=w1000",
+            "https://drive.google.com/thumbnail?id=12peSs2iVMrOUnMacGYruA0T56WOO0YNH&sz=w1000"
+        ],
+        "imageHeading": "Johnnie Traveler's",
+        "overview": true
+    },
+    {
         "start": "October 2023",
         "end": "December 2023",
         "name": "GH Pages",
@@ -8,23 +38,18 @@
             "GitHub"
         ],
         "description": [
-            "Description 1A.",
-            "Description 1B."
+            "This project showcases the deployment of static websites using GitHub Pages, a free hosting service from GitHub. It allows users to turn their repositories into websites that are automatically updated with every push. The pages are built using Jekyll, Hugo, or other static site generators, and are ideal for hosting documentation, blogs, portfolios, or project landing pages."
         ],
         "buttons": [
             {
-                "text": "Button 1A",
-                "link": "https://www.google.com/"
-            },
-            {
-                "text": "Button 1B",
-                "link": "https://www.google.com/"
+                "text": "link",
+                "link": "https://rahulssv.github.io/courses/"
             }
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/thumbnail?id=1-rewXKAaS3xs5c_-2j5eX9DPORpjC_es&sz=h200",
-            "https://drive.google.com/thumbnail?id=1-pVWFNOIyvGDBuZQB4Rek_tMoAB-txn8&sz=h200"
+            "https://drive.google.com/thumbnail?id=1-rewXKAaS3xs5c_-2j5eX9DPORpjC_es&sz=w1000",
+            "https://drive.google.com/thumbnail?id=1-pVWFNOIyvGDBuZQB4Rek_tMoAB-txn8&sz=w1000"
         ],
         "imageHeading": "GH Pages",
         "overview": true
@@ -46,22 +71,19 @@
             "Google Drive"
         ],
         "description": [
-            "Description 1A.",
-            "Description 1B."
+            "Welcome to Carpentry Craft, your premier carpentry service in Goa! With over 20 years of experience, we are your trusted partners for all your woodworking needs. From custom furniture to bespoke interiors, we specialize in creating functional and aesthetic solutions that elevate your space. Our team of skilled craftsmen is dedicated to delivering top-quality workmanship with attention to detail. Whether you need repairs, renovations, or new installations, we have the expertise to handle projects of any size and complexity. We pride ourselves on using the finest materials and modern techniques to ensure durable Looking for carpenter in Goa? We at Service on Wheel, provide fast and reliable carpentry service. Our service is available at 24*7."
         ],
         "buttons": [
             {
-                "text": "Button 1A",
-                "link": "https://www.google.com/"
-            },
-            {
-                "text": "Button 1B",
-                "link": "https://www.google.com/"
+                "text": "link",
+                "link": "https://rahulssv.github.io/rudra_enterprises"
             }
         ],
-        "videos": [],
+        "videos": [
+            "https://drive.google.com/file/d/136-WJqc9m5YH5JaWfucBTlt_WA73hwtQ/preview"
+        ],
         "images": [
-            "https://drive.google.com/thumbnail?id=12xVCvgNTHHqYasp07yCmb6uoKokrUtKI&sz=h200"
+            "https://drive.google.com/thumbnail?id=12xVCvgNTHHqYasp07yCmb6uoKokrUtKI&sz=w1000"
         ],
         "imageHeading": "Rudra Enterprises",
         "overview": true
@@ -80,59 +102,19 @@
             "MySQL DB"
         ],
         "description": [
-            "Description 1A.",
-            "Description 1B."
+            "A Quiz App is an interactive platform designed to test users' knowledge across a variety of subjects, such as general knowledge, science, history, and more. The app offers multiple-choice questions, timed quizzes, and real-time scoring to create an engaging learning experience. With features like customizable quiz categories, leaderboards, and performance tracking, users can challenge themselves and others. The app is user-friendly and suitable for learners of all ages, allowing for self-paced quizzes or competitive challenges. Ideal for both casual learning and serious study preparation."
         ],
         "buttons": [
             {
-                "text": "Button 1A",
-                "link": "https://www.google.com/"
-            },
-            {
-                "text": "Button 1B",
-                "link": "https://www.google.com/"
+                "text": "link",
+                "link": "https://rahulssv.github.io/quiz"
             }
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/thumbnail?id=12uxTnzk8AkwQ8p99DINdpBq3xQtwhGQD&sz=h200"
+            "https://drive.google.com/thumbnail?id=12uxTnzk8AkwQ8p99DINdpBq3xQtwhGQD&sz=w1000"
         ],
         "imageHeading": "Quiz App",
-        "overview": true
-    },
-    {
-        "start": "June 2023",
-        "end": "December 2023",
-        "name": "Johnnie Traveller's",
-        "technologies": [
-            "HTML",
-            "CSS",
-            "REACT JS",
-            "Spring Boot",
-            "Docker",
-            "GitHub Actions",
-            "MySQL DB"
-        ],
-        "description": [
-            "Description 1A.",
-            "Description 1B."
-        ],
-        "buttons": [
-            {
-                "text": "Button 1A",
-                "link": "https://www.google.com/"
-            },
-            {
-                "text": "Button 1B",
-                "link": "https://www.google.com/"
-            }
-        ],
-        "videos": [],
-        "images": [
-            "https://drive.google.com/thumbnail?id=12rUbaBCjXeh4NdMG_3vtDv7HeeQE_lKZ&sz=h200",
-            "https://drive.google.com/thumbnail?id=12peSs2iVMrOUnMacGYruA0T56WOO0YNH&sz=h200"
-        ],
-        "imageHeading": "Johnnie Traveller's",
         "overview": true
     },
     {
@@ -145,23 +127,18 @@
             "IBM Cloud"
         ],
         "description": [
-            "Description 1A.",
-            "Description 1B."
+            "Infrastructure automation using Terraform and Ansible on IBM Cloud provides a powerful combination for provisioning, managing, and configuring cloud resources efficiently."
         ],
         "buttons": [
             {
-                "text": "Button 1A",
-                "link": "https://www.google.com/"
-            },
-            {
-                "text": "Button 1B",
-                "link": "https://www.google.com/"
+                "text": "link",
+                "link": "https://rahulssv.github.io/terraform-ibm"
             }
         ],
         "videos": [],
         "images": [
-            "https://drive.google.com/thumbnail?id=12jgYEF8g7jhmv-j6hiQeKrOlU_I19M3U&sz=h200",
-            "https://drive.google.com/thumbnail?id=12d96u5vGl1ZozcbNtoRnjGCrYJnKOpDU&sz=h200"
+            "https://drive.google.com/thumbnail?id=12jgYEF8g7jhmv-j6hiQeKrOlU_I19M3U&sz=w1000",
+            "https://drive.google.com/thumbnail?id=12d96u5vGl1ZozcbNtoRnjGCrYJnKOpDU&sz=w1000"
         ],
         "imageHeading": "Infrastructure",
         "overview": true

@@ -2,6 +2,8 @@ import os
 import json
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
+from googleapiclient.http import MediaIoBaseDownload
+import io
 
 # Path to the Service Account JSON key file
 SERVICE_ACCOUNT_FILE = os.getenv('SERVICE_ACCOUNT_FILE')
@@ -38,6 +40,21 @@ def parse_item_name(item_name):
         # Handle unexpected formatting
         return None
 
+# Helper function to download and clean text file content from Google Drive
+def download_text_file(service, file_id):
+    request = service.files().get_media(fileId=file_id)
+    file_stream = io.BytesIO()
+    downloader = MediaIoBaseDownload(file_stream, request)
+    done = False
+    while not done:
+        status, done = downloader.next_chunk()
+    file_stream.seek(0)
+    
+    # Decode content and clean it
+    content = file_stream.read().decode('utf-8')
+    
+    return content
+
 # Helper function to list all files recursively with folder hierarchy
 def list_all_files(service, folder_id=DRIVE_ROOT_ID, parent_path=''):
     projects_dict = {}
@@ -73,29 +90,40 @@ def list_all_files(service, folder_id=DRIVE_ROOT_ID, parent_path=''):
                 if parsed_data:
                     project_name = parsed_data['name']
                     
-                    # Create file URL
-                    file_url = f"https://drive.google.com/thumbnail?id={item['id']}&sz=h200"
-                    
                     # Initialize the project in the dictionary if it doesn't exist
                     if project_name not in projects_dict:
                         projects_dict[project_name] = {
                             **parsed_data,  # Add project details
-                            'description': ["Description 1A.", "Description 1B."],
-                            'buttons': [
-                                {'text': 'Button 1A', 'link': 'https://www.google.com/'},
-                                {'text': 'Button 1B', 'link': 'https://www.google.com/'}
-                            ],
+                            'description': [],  # To be populated from description.txt
+                            'buttons': [],
                             'videos': [],
                             'images': [],
                             'imageHeading': project_name,  # Use the project name as heading
                             'overview': True  # Set overview to True
                         }
                     
+                    # Handle specific files: description.txt and link.txt
+                    if item['name'] == 'Description.txt':
+                        # Download the description content
+                        description_content = download_text_file(service, item['id'])
+                            # Split lines, remove \r and filter out empty lines
+                        clean_content = [line.strip() for line in description_content.splitlines() if line.strip()]
+                        projects_dict[project_name]['description'] = clean_content
+                    elif item['name'] == 'link.txt':
+                        # Download the link content and populate the buttons
+                        link_content = download_text_file(service, item['id']).strip()
+                        projects_dict[project_name]['buttons'] = [
+                            {'text': 'link', 'link': link_content}
+                        ]
                     # Append to either 'videos' or 'images' based on mimeType
-                    if 'video' in item['mimeType']:
-                        projects_dict[project_name]['videos'].append(file_url)
+                    elif 'video' in item['mimeType']:
+                        # Create file URL
+                        video_file_url = f"https://drive.google.com/file/d/{item['id']}/preview"
+                        projects_dict[project_name]['videos'].append(video_file_url)
                     elif 'image' in item['mimeType']:
-                        projects_dict[project_name]['images'].append(file_url)
+                        # Create file URL
+                        image_file_url = f"https://drive.google.com/thumbnail?id={item['id']}&sz=w1000"
+                        projects_dict[project_name]['images'].append(image_file_url)
                 
     return list(projects_dict.values())
 
