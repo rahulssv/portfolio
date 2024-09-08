@@ -48,12 +48,12 @@ function PortfolioDetail({ match }) {
 
           <h4> Media </h4>
 
-          <Row>
+          <Row style={{ display: 'flex', justifyContent: 'center' }}>
             {project.videos.length > 0 && project.videos.map((video, v_index) =>
-              <Col md={6} sm={12} key={v_index}>
+              <Col md={6} sm={12} key={v_index} >
                 <iframe
                   width="100%" height="315" src={video}
-                  title="YouTube video player" frameBorder="0"
+                  title={project.name.toLowerCase().replaceAll(' ', '_')} frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </Col>
             )}
@@ -68,7 +68,7 @@ function PortfolioDetail({ match }) {
               <Carousel>
                 {project.images.map((image, i_index) =>
                   <Carousel.Item key={i_index}>
-                    <img src={image} alt={project.name.toLowerCase().replaceAll(' ', '_')} style={{ display: 'block', margin: '0 auto', width: '500px', height: '300px' }}/>
+                    <img src={image} alt={project.name.toLowerCase().replaceAll(' ', '_')} style={{ display: 'block', margin: '0 auto', width: '500px', height: '300px' }} />
                   </Carousel.Item>
                 )}
               </Carousel>
