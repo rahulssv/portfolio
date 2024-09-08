@@ -10,7 +10,7 @@ jobs:
       - name: update file
         run: |
           cd auth
-          echo "${{ secrets.PRIVATE_KEY }}" > ${{ secrets.SERVICE_ACCOUNT_FILE }}
+          echo "${{ secrets.PRIVATE_KEY }}" | base64 --decode > ${{ secrets.SERVICE_ACCOUNT_FILE }}
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
