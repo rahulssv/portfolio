@@ -6,6 +6,12 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      
+      - name: update file
+        run: |
+          cd auth
+          echo "${{ secrets.PRIVATE_KEY }}" > ${{ secrets.SERVICE_ACCOUNT_FILE }}
+          chmod 600 ${{ secrets.SERVICE_ACCOUNT_FILE }}.
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
@@ -18,8 +24,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           cd auth
-          echo "${{ secrets.PRIVATE_KEY }}" > ${{ secrets.SERVICE_ACCOUNT_FILE }}
-          chmod 600 ${{ secrets.SERVICE_ACCOUNT_FILE }}.
           pip install -r requirements.txt
           python ServiceAccount.py
 
